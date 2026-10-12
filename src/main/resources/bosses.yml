@@ -1,0 +1,37 @@
+# ==============================================================================
+# AdminCore - Custom Bosses Configuration
+# Developed and credited entirely to LivingYuji
+# ==============================================================================
+
+bosses:
+  infernal_titan:
+    display-name: "&4&lInfernal Titan"
+    entity-type: "WITHER_SKELETON"
+    health: 500.0
+    damage: 15.0
+    speed: 0.35
+    bar-color: "RED"
+    bar-style: "NOTCHED_10"
+    abilities:
+      - "knockback"
+      - "minions"
+      - "strike"
+    reward-commands:
+      - "give %player% netherite_ingot 2"
+      - "give %player% diamond 10"
+      - "xp add %player% 500"
+
+  void_reaver:
+    display-name: "&5&lVoid Reaver"
+    entity-type: "WARDEN"
+    health: 750.0
+    damage: 20.0
+    speed: 0.30
+    bar-color: "PURPLE"
+    bar-style: "SOLID"
+    abilities:
+      - "knockback"
+      - "strike"
+    reward-commands:
+      - "give %player% echo_shard 5"
+      - "give %player% netherite_scrap 4"

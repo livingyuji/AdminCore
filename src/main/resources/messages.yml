@@ -1,0 +1,41 @@
+# ==============================================================================
+# AdminCore - Configurable Player Messages
+# Developed and credited entirely to LivingYuji
+# ==============================================================================
+
+prefix: "&8[&bAdminCore&8]&r "
+
+general:
+  no-permission: "%prefix%&cYou do not have permission to execute this command."
+  player-not-found: "%prefix%&cThe specified player was not found or is offline."
+  only-players: "%prefix%&cThis command can only be executed by in-game players."
+  reload-success: "%prefix%&aConfigurations have been successfully reloaded."
+
+player:
+  heal-success: "%prefix%&aPlayer &e%player% &ahas been healed and fed."
+  fly-toggled: "%prefix%&eFlight for &f%player% &eset to: &f%state%"
+  god-toggled: "%prefix%&eGod mode for &f%player% &eset to: &f%state%"
+  speed-updated: "%prefix%&eSpeed for &f%player% &eset to &f%speed%."
+  vanish-enabled: "%prefix%&aYou are now vanished and hidden from regular players."
+  vanish-disabled: "%prefix%&cYou are now visible to everyone."
+  freeze-frozen: "%prefix%&c&lYOU ARE FROZEN! &r&cDo not log out or you may be banned."
+  freeze-unfrozen: "%prefix%&aYou have been unfrozen by staff."
+  teleport-success: "%prefix%&aTeleported to &e%player%&a."
+  teleport-here-success: "%prefix%&aTeleported &e%player% &ato your location."
+  back-success: "%prefix%&aReturned to previous location."
+  back-none: "%prefix%&cNo prior teleport or death location found."
+
+moderation:
+  warn-issued: "%prefix%&aPlayer &e%player% &ahas been warned for: &f%reason%"
+  mute-issued: "%prefix%&aPlayer &e%player% &ahas been muted for &f%duration%&a. Reason: &f%reason%"
+  unmute-success: "%prefix%&aPlayer &e%player% &ahas been unmuted."
+  kick-issued: "%prefix%&aPlayer &e%player% &ahas been kicked."
+  ban-issued: "%prefix%&aPlayer &e%player% &ahas been banned for: &f%reason%"
+  unban-success: "%prefix%&aPlayer &e%player% &ahas been unbanned."
+  report-submitted: "%prefix%&aYour report against &e%player% &ahas been submitted."
+
+events:
+  joined: "%prefix%&aYou successfully joined event &b%event%&a!"
+  left: "%prefix%&eYou left event &b%event%&e."
+  already-joined: "%prefix%&cYou have already joined this event."
+  full: "%prefix%&cEvent &b%event% &cis currently full!"

@@ -1,0 +1,31 @@
+# ==============================================================================
+# AdminCore - Server Events Configuration
+# Developed and credited entirely to LivingYuji
+# ==============================================================================
+
+events:
+  lms_main:
+    type: "LMS"
+    display-name: "&c&lLast Man Standing"
+    min-players: 2
+    max-players: 50
+    reward-commands:
+      - "give %player% diamond_block 1"
+      - "xp add %player% 250"
+
+  koth_center:
+    type: "KOTH"
+    display-name: "&6&lKing of the Hill"
+    min-players: 2
+    max-players: 30
+    reward-commands:
+      - "give %player% emerald_block 2"
+      - "give %player% golden_apple 5"
+
+  sumo_arena:
+    type: "SUMO"
+    display-name: "&b&lSumo Knockout"
+    min-players: 2
+    max-players: 16
+    reward-commands:
+      - "give %player% diamond 5"

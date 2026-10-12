@@ -1,0 +1,44 @@
+# ==============================================================================
+# AdminCore - All-in-One Minecraft Server Administration Plugin
+# Developed and credited entirely to LivingYuji
+# Target Platform: Paper 1.21.1 | JDK 21
+# ==============================================================================
+
+# General settings
+language: en
+debug-mode: false
+
+# Storage options: SQLITE (default, zero configuration required)
+storage:
+  type: SQLITE
+
+# Subsystem modules toggle
+modules:
+  player-utilities: true
+  moderation: true
+  troll: true
+  bosses: true
+  events: true
+  cosmetics: true
+  rewards: true
+
+# Discord Webhook Integration (asynchronous, no bot token required)
+discord:
+  enabled: false
+  webhook-url: ""
+  notifications:
+    punishments: true
+    staff-actions: true
+    events: true
+    bosses: true
+    system: true
+
+# Safety parameters
+safety:
+  max-troll-duration-seconds: 15
+  enable-destructive-pranks: false
+
+# Audit logging settings
+audit:
+  log-to-database: true
+  log-to-console: false

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdminCore — Installation & Setup Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1, h2, h3 {
+            color: #0366d6;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h1 { font-size: 2.2em; }
+        h2 { font-size: 1.6em; margin-top: 24px; }
+        code {
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            font-size: 85%;
+            padding: 0.2em 0.4em;
+            font-family: Consolas, monospace;
+        }
+        pre {
+            background-color: #f6f8fa;
+            border-radius: 6px;
+            padding: 16px;
+            overflow: auto;
+            font-family: Consolas, monospace;
+            font-size: 85%;
+            border: 1px solid #e1e4e8;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+        }
+        th, td {
+            border: 1px solid #dfe2e5;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f6f8fa;
+        }
+        .header-meta {
+            background: #f1f8ff;
+            border-left: 4px solid #0366d6;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AdminCore — Installation & Setup Guide</h1>
+    <div class="header-meta">
+        <strong>Author & Developer:</strong> LivingYuji<br>
+        <strong>Target Environment:</strong> Minecraft Paper 1.21.1+ | Java 21+<br>
+        <strong>Notice:</strong> AdminCore is an original Minecraft plugin developed by LivingYuji. All original AdminCore source code, project documentation, and project-specific assets created for this project are credited to LivingYuji.
+    </div>
+
+    <h2>1. System Requirements</h2>
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>Requirement</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>Java Runtime</td>
+            <td>Java 21 (LTS)</td>
+            <td>Eclipse Adoptium Temurin 21 recommended</td>
+        </tr>
+        <tr>
+            <td>Server Platform</td>
+            <td>Paper 1.21.1</td>
+            <td>Supports modern Adventure components</td>
+        </tr>
+        <tr>
+            <td>Storage Engine</td>
+            <td>SQLite</td>
+            <td>Embedded, automatic schema migrations</td>
+        </tr>
+        <tr>
+            <td>Optional Plugins</td>
+            <td>Vault, LuckPerms</td>
+            <td>Gracefully detected if present</td>
+        </tr>
+    </table>
+
+    <h2>2. Installation Instructions</h2>
+    <ol>
+        <li>Verify Java 21 is installed: <code>java -version</code></li>
+        <li>Cleanly stop your Minecraft server with <code>stop</code>.</li>
+        <li>Copy <code>AdminCore-1.0.0.jar</code> into the server <code>plugins/</code> folder.</li>
+        <li>Start the server. Configuration files and database will be generated automatically in <code>plugins/AdminCore/</code>.</li>
+        <li>Verify startup by reviewing server console logs.</li>
+    </ol>
+
+    <h2>3. LuckPerms Permissions Configuration</h2>
+    <p>Configure staff roles using LuckPerms:</p>
+    <pre>
+# Helper Role
+lp group helper permission set admincore.gui true
+lp group helper permission set admincore.player.info true
+lp group helper permission set admincore.player.freeze true
+lp group helper permission set admincore.moderation.warn true
+
+# Moderator Role
+lp group mod permission set admincore.gui true
+lp group mod permission set admincore.player.* true
+lp group mod permission set admincore.moderation.* true
+lp group mod permission set admincore.player.staffmode true
+
+# Administrator Role
+lp group admin permission set admincore.* true
+    </pre>
+
+    <h2>4. Quick Start Commands</h2>
+    <ul>
+        <li><code>/ac</code> — Open the interactive 10-section Admin Control Center</li>
+        <li><code>/ac help</code> — View category-specific help pages</li>
+        <li><code>/ac reload</code> — Safely reload all configuration files</li>
+        <li><code>/ac version</code> — View version and author credits</li>
+    </ul>
+
+</body>
+</html>

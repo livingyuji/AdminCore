@@ -1,0 +1,47 @@
+# ==============================================================================
+# AdminCore - Cosmetics Configuration
+# Developed and credited entirely to LivingYuji
+# ==============================================================================
+
+cosmetics:
+  flame_trail:
+    name: "&6Flame Walker"
+    type: "TRAIL"
+    particle: "FLAME"
+    icon: "BLAZE_POWDER"
+    permission: "admincore.cosmetics.flame_trail"
+
+  heart_trail:
+    name: "&cHeart Path"
+    type: "TRAIL"
+    particle: "HEART"
+    icon: "POPPY"
+    permission: "admincore.cosmetics.heart_trail"
+
+  portal_trail:
+    name: "&5Void Rift"
+    type: "TRAIL"
+    particle: "PORTAL"
+    icon: "ENDER_EYE"
+    permission: "admincore.cosmetics.portal_trail"
+
+  angel_aura:
+    name: "&fAngel Halo"
+    type: "AURA"
+    particle: "END_ROD"
+    icon: "FEATHER"
+    permission: "admincore.cosmetics.angel_aura"
+
+  dragon_aura:
+    name: "&dDragon Breath"
+    type: "AURA"
+    particle: "DRAGON_BREATH"
+    icon: "DRAGON_EGG"
+    permission: "admincore.cosmetics.dragon_aura"
+
+  lightning_kill:
+    name: "&eThunder Strike Kill"
+    type: "KILL_EFFECT"
+    particle: "FLASH"
+    icon: "LIGHTNING_ROD"
+    permission: "admincore.cosmetics.lightning_kill"

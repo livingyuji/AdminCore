@@ -1,0 +1,71 @@
+/*
+ * AdminCore - All-in-One Minecraft Server Administration Plugin
+ * Copyright (C) 2026 LivingYuji. All rights reserved.
+ *
+ * Developed and credited entirely to LivingYuji.
+ */
+
+plugins {
+    id 'java'
+}
+
+group = 'com.livingyuji.admincore'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "papermc"
+        url = uri("https://repo.papermc.io/repository/maven-public/")
+    }
+    maven {
+        name = "sonatype-snapshots"
+        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+    }
+    maven {
+        name = "jitpack"
+        url = uri("https://jitpack.io")
+    }
+}
+
+dependencies {
+    // Paper API 1.21.1
+    compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
+
+    // Optional Integrations
+    compileOnly 'net.luckperms:api:5.4'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
+
+    // Unit Testing
+    testImplementation 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
+    testImplementation 'net.luckperms:api:5.4'
+    testImplementation 'com.github.MilkBowl:VaultAPI:1.7'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.mockito:mockito-core:5.11.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.11.0'
+    testImplementation 'org.yaml:snakeyaml:2.2'
+    testImplementation 'org.xerial:sqlite-jdbc:3.45.2.0'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+
+tasks.named('jar') {
+    archiveFileName.set('AdminCore-1.0.0.jar')
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

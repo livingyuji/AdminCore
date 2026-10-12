@@ -1,0 +1,37 @@
+# ==============================================================================
+# AdminCore - GUI Configuration
+# Developed and credited entirely to LivingYuji
+# ==============================================================================
+
+dashboard:
+  title: "&8&lAdminCore Dashboard"
+  size: 54
+  filler-material: "GRAY_STAINED_GLASS_PANE"
+
+player-management:
+  title: "&8&lPlayer Management"
+  size: 54
+
+moderation-center:
+  title: "&8&lModeration Center"
+  size: 36
+
+troll-tools:
+  title: "&8&lFun & Troll Pranks"
+  size: 36
+
+boss-manager:
+  title: "&8&lCustom Boss Manager"
+  size: 36
+
+event-manager:
+  title: "&8&lServer Event Manager"
+  size: 36
+
+cosmetics-manager:
+  title: "&8&lCosmetics Selector"
+  size: 36
+
+server-tools:
+  title: "&8&lServer & Plugin Tools"
+  size: 27

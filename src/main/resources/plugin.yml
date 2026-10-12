@@ -1,0 +1,196 @@
+name: AdminCore
+version: '1.0.0'
+main: com.livingyuji.admincore.AdminCore
+api-version: '1.21'
+author: LivingYuji
+description: "AdminCore is an all-in-one Minecraft server administration, staff utilities, custom events, fun effects, cosmetics, moderation, and server management plugin."
+website: ""
+softdepend: [Vault, LuckPerms]
+
+commands:
+  admincore:
+    description: Main administrative command for AdminCore by LivingYuji
+    aliases: [ac]
+    permission: admincore.gui
+    usage: /<command> [subcommand] [arguments]
+
+permissions:
+  admincore.*:
+    description: Wildcard access to all AdminCore administrative features
+    default: false
+    children:
+      admincore.admin: true
+      admincore.gui: true
+      admincore.reload: true
+      admincore.debug: true
+      admincore.status: true
+      admincore.player.info: true
+      admincore.player.inventory: true
+      admincore.player.teleport: true
+      admincore.player.heal: true
+      admincore.player.fly: true
+      admincore.player.god: true
+      admincore.player.vanish: true
+      admincore.player.freeze: true
+      admincore.player.spectate: true
+      admincore.player.effect: true
+      admincore.player.speed: true
+      admincore.player.staffmode: true
+      admincore.troll.use: true
+      admincore.troll.advanced: true
+      admincore.boss.view: true
+      admincore.boss.manage: true
+      admincore.event.join: true
+      admincore.event.manage: true
+      admincore.cosmetics.use: true
+      admincore.cosmetics.manage: true
+      admincore.moderation.warn: true
+      admincore.moderation.mute: true
+      admincore.moderation.kick: true
+      admincore.moderation.ban: true
+      admincore.moderation.history: true
+      admincore.moderation.notes: true
+      admincore.moderation.reports: true
+      admincore.logs.view: true
+      admincore.logs.export: true
+      admincore.discord.manage: true
+
+  admincore.admin:
+    description: Full administrative rights
+    default: op
+
+  admincore.gui:
+    description: Access to interactive dashboard GUI
+    default: op
+
+  admincore.reload:
+    description: Permission to reload plugin configuration files
+    default: op
+
+  admincore.debug:
+    description: Permission to toggle debug logging
+    default: op
+
+  admincore.status:
+    description: Permission to view system diagnostic status
+    default: op
+
+  admincore.player.info:
+    description: Permission to inspect player statistics and coordinates
+    default: op
+
+  admincore.player.inventory:
+    description: Permission to view live player inventories and ender chests
+    default: op
+
+  admincore.player.teleport:
+    description: Permission to use staff teleport utilities (tp, tphere, tpall, back)
+    default: op
+
+  admincore.player.heal:
+    description: Permission to heal and feed players
+    default: op
+
+  admincore.player.fly:
+    description: Permission to toggle flight mode
+    default: op
+
+  admincore.player.god:
+    description: Permission to toggle invulnerability mode
+    default: op
+
+  admincore.player.vanish:
+    description: Permission to toggle vanish invisibility mode
+    default: op
+
+  admincore.player.freeze:
+    description: Permission to freeze and unfreeze players
+    default: op
+
+  admincore.player.spectate:
+    description: Permission to spectate players
+    default: op
+
+  admincore.player.effect:
+    description: Permission to apply potion effects
+    default: op
+
+  admincore.player.speed:
+    description: Permission to alter movement speed
+    default: op
+
+  admincore.player.staffmode:
+    description: Permission to enter staff duty mode
+    default: op
+
+  admincore.troll.use:
+    description: Access to harmless troll and fun pranks
+    default: op
+
+  admincore.troll.advanced:
+    description: Access to advanced troll prank tools
+    default: op
+
+  admincore.boss.view:
+    description: View boss details and active bosses
+    default: true
+
+  admincore.boss.manage:
+    description: Spawn, remove, and configure custom bosses
+    default: op
+
+  admincore.event.join:
+    description: Join scheduled server events
+    default: true
+
+  admincore.event.manage:
+    description: Create, start, schedule, and cancel server events
+    default: op
+
+  admincore.cosmetics.use:
+    description: Equip unlocked cosmetics and particle trails
+    default: true
+
+  admincore.cosmetics.manage:
+    description: Manage and grant cosmetics
+    default: op
+
+  admincore.moderation.warn:
+    description: Issue warnings to players
+    default: op
+
+  admincore.moderation.mute:
+    description: Mute and unmute players
+    default: op
+
+  admincore.moderation.kick:
+    description: Kick players from the server
+    default: op
+
+  admincore.moderation.ban:
+    description: Ban, tempban, and unban players
+    default: op
+
+  admincore.moderation.history:
+    description: View player punishment histories
+    default: op
+
+  admincore.moderation.notes:
+    description: Add and view staff notes on players
+    default: op
+
+  admincore.moderation.reports:
+    description: View and manage player reports
+    default: op
+
+  admincore.logs.view:
+    description: View staff action audit logs
+    default: op
+
+  admincore.logs.export:
+    description: Export audit logs to disk
+    default: op
+
+  admincore.discord.manage:
+    description: Manage and test Discord webhook notifications
+    default: op

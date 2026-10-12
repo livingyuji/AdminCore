@@ -1,0 +1,29 @@
+# ==============================================================================
+# AdminCore - Rewards Configuration
+# Developed and credited entirely to LivingYuji
+# ==============================================================================
+
+tables:
+  event_winner:
+    money: 1000.0
+    items:
+      - "DIAMOND:5"
+      - "GOLDEN_APPLE:3"
+    commands:
+      - "xp add %player% 500"
+    message: "&6&l[REWARDS]&r &aYou received the Event Winner reward bundle!"
+
+  event_participant:
+    money: 250.0
+    items:
+      - "IRON_INGOT:10"
+    message: "&aThanks for participating in the event!"
+
+  boss_slayer:
+    money: 2500.0
+    items:
+      - "NETHERITE_INGOT:1"
+      - "DIAMOND:10"
+    commands:
+      - "xp add %player% 1000"
+    message: "&4&l[BOSS REWARD]&r &eYou claimed the Boss Slayer reward bundle!"
